@@ -15,12 +15,35 @@ function getComputerChoice(){
     }
 }
 
+
+function capitalize(str){
+    str = str.toLowerCase();
+    str = str[0].toUpperCase() + str.slice(1)
+    return str;
+}
+
+function game(){
+  
+    for (let i = 0; i < 5; i++){
+        let playerChoice = prompt("Enter Rock, Paper, or Scissors:");
+        let computerChoice = getComputerChoice();
+        console.log(playRound(playerChoice, computerChoice));
+        if (i === 4){
+            if (playerScore > computerScore){
+                console.log(`You  won ${playerScore} games and the computer won ${computerScore} games. You Win!`)
+            } else if (playerScore < computerScore){
+                console.log(`You  won ${playerScore} games and the computer won ${computerScore} games. You lose!`)
+            } else{
+                `You both won ${playerScore} games. It's a tie!`
+            }
+        }
+}
+}
+
 function playRound(playerSelection, computerSelection){
     playerSelection = capitalize(playerSelection);
-    computerSelection = capitalize(computerSelection)
-    let playerScore = 0;
-    let computerScore = 0;
-
+    computerSelection = capitalize(computerSelection);
+   
     if (playerSelection === computerSelection){
         return `It's a tie! You both chose ${playerSelection}`
     } else if (playerSelection === "Rock"){
@@ -54,9 +77,7 @@ function playRound(playerSelection, computerSelection){
 
 }
 
-function capitalize(str){
-    str = str.toLowerCase();
-    str = str[0].toUpperCase() + str.slice(1)
-    return str;
-}
+let playerScore = 0;
+let computerScore = 0;
 
+game()
