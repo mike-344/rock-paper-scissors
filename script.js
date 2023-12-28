@@ -26,7 +26,7 @@ const playerScoreDisplay = document.querySelector(".playerscore")
 const computerScoreDisplay = document.querySelector(".computerscore")
 
 rock.addEventListener("click", () =>{
-    
+ 
     let computerChoice = getComputerChoice();
     if (computerChoice == "Rock"){
         resultsRound.textContent = "Computer chose Rock, it's a tie!"
@@ -42,9 +42,29 @@ rock.addEventListener("click", () =>{
         playerScore++;
         playerScoreDisplay.textContent = playerScore
     }
+    if (computerScore == 5){
+        resultsRound.textContent = `The computer won ${computerScore} games and you won${playerScore}games,the computer wins!`
+        computerScore = 0;
+        playerScore = 0;
+        computerScoreDisplay.textContent = computerScore
+        playerScoreDisplay.textContent = playerScore
+    
+    }
+    
+    if (playerScore == 5){
+        resultsRound.textContent = `The computer won ${computerScore} games and you won${playerScore}games, you win!`
+        computerScore = 0;
+        playerScore = 0;
+        computerScoreDisplay.textContent = computerScore
+        playerScoreDisplay.textContent = playerScore
+    
+    }
+    
 })
 
 paper.addEventListener("click", () =>{
+ 
+
     let computerChoice = getComputerChoice();
     if (computerChoice == "Paper"){
         resultsRound.textContent = "Computer chose Paper, it's a tie!"
@@ -60,9 +80,27 @@ paper.addEventListener("click", () =>{
         playerScore++;
         playerScoreDisplay.textContent = playerScore
     }
+    if (computerScore == 5){
+        resultsRound.textContent = `The computer won ${computerScore} games and you won${playerScore}games,the computer wins!`
+        computerScore = 0;
+        playerScore = 0;
+        computerScoreDisplay.textContent = computerScore
+        playerScoreDisplay.textContent = playerScore
+    
+    }
+    
+    if (playerScore == 5){
+        resultsRound.textContent = `The computer won ${computerScore} games and you won${playerScore}games, you win!`
+        computerScore = 0;
+        playerScore = 0;
+        computerScoreDisplay.textContent = computerScore
+        playerScoreDisplay.textContent = playerScore
+    
+    }
 })
 
 scissors.addEventListener("click", () =>{
+   
     let computerChoice = getComputerChoice();
     if (computerChoice == "Scissors"){
         resultsRound.textContent = "Computer chose Scissors, it's a tie!"
@@ -78,4 +116,23 @@ scissors.addEventListener("click", () =>{
         playerScore++;
         playerScoreDisplay.textContent = playerScore
     }
+    if (computerScore == 5){
+        resultsRound.textContent = `The computer won ${computerScore} games and you won${playerScore}games,the computer wins!`
+        computerScore = 0;
+        playerScore = 0;
+        computerScoreDisplay.textContent = computerScore
+        playerScoreDisplay.textContent = playerScore
+    
+    }
+    
+    if (playerScore == 5){
+        resultsRound.textContent = `The computer won ${computerScore} games and you won${playerScore}games, you win!`
+        computerScore = 0;
+        playerScore = 0;
+        computerScoreDisplay.textContent = computerScore
+        playerScoreDisplay.textContent = playerScore
+    
+    }
+
 })
+
